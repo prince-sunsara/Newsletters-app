@@ -72,8 +72,3 @@ app.listen(process.env.PORT || 3000, () => {
     console.log("Server started at port 3000.")
 });
 
-
-
-
-// Unique Id : 3238143bba
-// API key : ae025bdcbbf3db0099215947251c5e01-us21
