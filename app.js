@@ -7,7 +7,7 @@ const https = require("https");
 
 // Mainchimp setup 
 mailchimp.setConfig({
-    apiKey: "ae025bdcbbf3db0099215947251c5e01-us21",
+    apiKey: "ae02****************************-us21",
     server: "us21",
   });
 
@@ -41,7 +41,7 @@ app.post("/", (req, res) => {
     const url = "https://us21.api.mailchimp.com/3.0/lists/3238143bba";
     const options = {
         method: "POST",
-        auth: "prince:ae025bdcbbf3db0099215947251c5e01-us21"
+        auth: "prince:ae02****************************-us21"
     }
 
     console.log(jsonData);
