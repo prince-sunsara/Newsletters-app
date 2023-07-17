@@ -1,13 +1,16 @@
+require('dotenv').config();
+
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const request = require("request");
 const mailchimp = require("@mailchimp/mailchimp_marketing");
 const https = require("https");
+const mailchimpAPI = process.env.MAILCHIMP_SECRET_KEY;
 
 // Mainchimp setup 
 mailchimp.setConfig({
-    apiKey: "ae02****************************-us21",
+    apiKey: mailchimpAPI,
     server: "us21",
   });
 
@@ -41,7 +44,7 @@ app.post("/", (req, res) => {
     const url = "https://us21.api.mailchimp.com/3.0/lists/3238143bba";
     const options = {
         method: "POST",
-        auth: "prince:ae02****************************-us21"
+        auth: `prince:${mailchimpAPI}`
     }
 
     console.log(jsonData);
